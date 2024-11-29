@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Digital Library</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            background-color: #fceff9;
+            color: #333;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #87531f;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* About Section */
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background-color: #fff8f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .about-section h2 {
+            color: #473636;
+            margin-bottom: 15px;
+            font-size: 2.2em;
+        }
+
+        .about-section p {
+            max-width: 800px;
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Team Section */
+        .team-section {
+            background-color: #fff8f0;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-section h2 {
+            text-align: center;
+            color: #d38436;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .team-member {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #b77b37;
+        }
+
+        .team-member h3 {
+            font-size: 1.3em;
+            color: #c98541;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #dab692;
+            color: #fff;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>About Our Digital Library</h1>
+    </header>
+
+    <div class="container">
+        <section class="about-section">
+            <h2>Our Mission</h2>
+            <p>Our Digital Library, 'Infinite Pages,' boasts an extensive collection of novels and research resources, connecting readers to timeless classics, contemporary bestsellers, and insightful scholarly publications. We strive to make knowledge universally accessible, nurturing a love for reading and supporting lifelong learning on a global scale. With a user-friendly interface, curated recommendations, and seamless access to diverse literary treasures, 'Infinite Pages' is dedicated to enriching minds and fostering a vibrant reading community worldwide. Our platform empowers users with the knowledge and inspiration they need, facilitating a deeper understanding of the world and encouraging intellectual growth...</p>
+        </section>
+
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="prof.webp" alt="Team Member 1">
+                    <h3>Sai Spurthi.B</h3>
+                    
+                </div>
+                <div class="team-member">
+                    <img src="prof.webp" alt="Team Member 2">
+                    <h3>Rupa Sri.R</h3>
+                   
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Digital Library. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
