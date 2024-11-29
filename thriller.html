@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Pages - SCience-Fiction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #c28542;
+            color: #333;
+        }
+
+        /* Top scrolling message */
+        .scrolling-message {
+            width: 200%;
+            background-color: #e79e9e;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .scrolling-message p {
+            display: inline-block;
+            animation: scroll 10s linear infinite;
+            word-spacing: 15px; /* Add space between words */
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(220, 176, 127);
+            padding: 15px 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .brand {
+            font-size: 28px;
+            font-family: 'Great Vibes', cursive;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+            margin: auto;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff6f61;
+        }
+
+        .navbar .icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .icons i {
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        .navbar .icons i:hover {
+            color: #ff6f61;
+        }
+
+        /* Product Section Styling */
+        .product-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+            width: 23%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            position: relative; /* Added for hover effect */
+            overflow: hidden;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product h3, .product p, .product .price, .product .add-to-cart {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product:hover h3, .product:hover p, .product:hover .price, .product:hover .add-to-cart {
+            opacity: 1;
+        }
+
+        .product h3 {
+            margin: 15px 0 5px 0;
+        }
+
+        .product p {
+            margin-bottom: 10px;
+        }
+
+        .product .price {
+            font-weight: bold;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .product .add-to-cart {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            opacity: 0; /* Initially hidden */
+            visibility: hidden; /* Hidden until hover */
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .product:hover .add-to-cart {
+            opacity: 1; /* Show on hover */
+            visibility: visible; /* Visible on hover */
+        }
+
+        .product .add-to-cart:hover {
+            background-color: #ff6f61;
+        }
+
+        @media (max-width: 1024px) {
+            .product {
+                width: 48%; /* For medium screens, two products per row */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                width: 100%; /* For small screens, one product per row */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scrolling message -->
+    <div class="scrolling-message">
+        <p>Pay only 25% now  | Best Selling Books | Track your order | Cash on delivery Available | Heavy Discounts | Shop by Author | Free Shipping on Orders Above Rs. 700 </p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">Infinite Pages: Thrillers </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+            <a href="#"><i class="fa fa-user"></i></a>
+        </div>
+    </nav>
+
+    
+    <section class="product-section">
+        <div class="product">
+            <img src="t1.webp" alt=" Walkers High : Black">
+            <h3>Krishna Tales by chitra</h3>
+            <p class="price">Rs. 480</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('Krishna Tales')">Add to Cart</a>
+        </div>
+
+        <div class="product">
+            <img src="t2.jpg" alt="Mysteries of the Universe">
+            <h3>Brain games for clever Kids</h3>
+            <p class="price">Rs. 670</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('Brain games for clever Kidsk')">Add to Cart</a>
+        </div>
+
+        <div class="product">
+            <img src="t3.webp" alt="What If">
+            <h3>Panchathantra Stories</h3>
+            <p class="price">Rs. 450</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('Panchathantra Stories')">Add to Cart</a>
+        </div>
+
+        <div class="product">
+            <img src="t4.webp" alt="A breif story of Black Holes">
+            <h3>Shivaji Maharaj</h3>
+            <p class="price">Rs. 570</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('Shivaji Maharaj')">Add to Cart</a>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <div class="product">
+            <img src="t5.webp" alt="Intersteller">
+            <h3>Magical Journey of Arabian Nights</h3>
+            <p class="price">Rs. 350</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('Magical Journey of Arabian Nights')">Add to Cart</a>
+        </div>
+
+        <div class="product">
+            <img src="t6.webp" alt="The Big Bang of Numbers">
+            <h3>5 Minuite Tales</h3>
+            <p class="price">Rs. 400</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('5 Minuite Tales')">Add to Cart</a>
+        </div>
+
+        <div class="product">
+            <img src="t7.webp" alt="Men Grey Sneakers">
+            <h3>Awsome Riddles </h3>
+            <p class="price">Rs. 380</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('Awsome Riddles')">Add to Cart</a>
+        </div>
+
+        <div class="product">
+            <img src="t8.webp" alt="Leather Ex : Sleek Brown">
+            <h3>Little Men by Loisa Mel</h3>
+            <p class="price">Rs. 600</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('Little Men')">Add to Cart</a>
+        </div>
+
+        <div class="product">
+            <img src="t9.webp" alt="Leather Ex : Sleek Brown">
+            <h3>Dracula by Brain Stolker</h3>
+            <p class="price">Rs. 580</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('Dracula')">Add to Cart</a>
+        </div>
+
+
+        <div class="product">
+            <img src="t10.webp" alt="Leather Ex : Sleek Brown">
+            <h3>White Fank by Jack London</h3>
+            <p class="price">Rs. 670</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('White Fank')">Add to Cart</a>
+        </div>
+
+
+
+        <div class="product">
+            <img src="t11.jpg" alt="Leather Ex : Sleek Brown">
+            <h3>The Human Body in 30secs</h3>
+            <p class="price">Rs. 700</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('The Human Body in 30secs')">Add to Cart</a>
+        </div>
+
+
+
+        <div class="product">
+            <img src="t12.webp" alt="Leather Ex : Sleek Brown">
+            <h3>The cat in the hat</h3>
+            <p class="price">Rs. 670</p>
+            <a href="#" class="add-to-cart" onclick="addToCart('The cat in the ha')">Add to Cart</a>
+        </div>
+    </section>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + " has been added to your cart!");
+        }
+    </script>
+</body>
+</html>
