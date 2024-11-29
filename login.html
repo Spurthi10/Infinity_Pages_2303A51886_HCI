@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westerville Public Library</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .header .logo {
+            font-size: 24px;
+        }
+        .header .login {
+            background-color: #ffffff;
+            color: #4CAF50;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .main-banner {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+        .main-banner img {
+            max-width: 100%;
+            height: auto;
+        }
+        .main-banner .content {
+            margin-left: 20px;
+            flex: 1;
+        }
+        .main-banner .content h2 {
+            margin-top: 0;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+        .section h3 {
+            margin-top: 0;
+        }
+        .articles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .article {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            flex: 1;
+            max-width: 30%;
+        }
+        .article img {
+            max-width: 100%;
+            height: auto;
+        }
+        .login-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .login-modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+        }
+        .login-modal-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        .login-modal-content button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Westerville Public Library</div>
+        <div class="nav">
+            <a href="#">Books, Movies & More</a>
+            <a href="#">Services</a>
+            <a href="#">Events</a>
+            <a href="#">Hours & Location</a>
+            <a href="#">Help</a>
+            <a href="#" onclick="document.getElementById('loginModal').style.display='block'">Log In / My WPL</a>
+        </div>
+    </div>
+    <div class="main-banner">
+        <img src="author.jpg" alt="Author">
+        <div class="content">
+            <h2>Meet the Author</h2>
+            <h3>Fiona Davis</h3>
+            <p>Listen to bestselling author Fiona Davis talk about her newest title, <em>The Magnolia Palace</em>. Options include: fundraising reception at Brio Italian Grille Polaris, presentation, audience Q&A, book signing, and book sale.</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <div class="section">
+        <h3>Level Up</h3>
+        <p>...with your library card. Unlock an expansion pack of tools and services to boost your energy, improve your odds, and reboot your life.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="articles">
+        <div class="article">
+            <img src="new-website.jpg" alt="New Website">
+            <h4>Same Library, New Website</h4>
+        </div>
+        <div class="article">
+            <img src="potluck.jpg" alt="Potluck">
+            <h4>Welcome to the Table: Westerville's Potluck</h4>
+        </div>
+        <div class="article">
+            <img src="tax-forms.jpg" alt="Tax Forms">
+            <h4>Tax Forms & Information</h4>
+        </div>
+    </div>
+    <div id="loginModal" class="login-modal">
+        <div class="login-modal-content">
+            <span onclick="document.getElementById('loginModal').style.display='none'" style="float:right;cursor:pointer;">&times;</span>
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" id="username">
+            <input type="password" placeholder="Password" id="password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username === "user" && password === "password") {
+                alert("Login successful!");
+                document.getElementById('loginModal').style.display='none';
+            } else {
+                alert("Login failed. Please try again.");
+            }
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('loginModal')) {
+                document.getElementById('loginModal').style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
