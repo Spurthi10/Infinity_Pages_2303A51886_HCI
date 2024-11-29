@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library - Profile</title>
+    <style>
+        /* General Styles */
+        body, h1, h2, p {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f0f8ff; /* Light pastel blue background */
+            color: #333;
+        }
+        .navbar, footer {
+            background-color: #c7ddfb; /* Soft pastel pink */
+            color: #5a5959;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .navbar a {
+            color: #585858;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 50px;
+            height: auto;
+        }
+        .profile-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid #ddd;
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #a3b6b7; /* Pastel teal border */
+            transition: transform 0.3s ease;
+        }
+        .profile-header img:hover {
+            transform: scale(1.1);
+        }
+        .profile-header div {
+            margin-left: 2rem;
+        }
+        .profile-header h2 {
+            font-size: 2rem;
+            margin: 0;
+            color: #4a6a6a; /* Pastel green */
+        }
+        .profile-header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+        .profile-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .profile-details div {
+            background: #f9f9f9; /* Light pastel gray */
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .profile-details h3 {
+            margin-bottom: 1rem;
+            color: #4a6a6a; /* Pastel green */
+        }
+        .profile-details p {
+            color: #666;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #cad8f6; /* Soft pastel peach */
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #c4dbf7; /* Slightly darker pastel peach */
+            transform: scale(1.05);
+        }
+        footer {
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="DLlogo.webp" alt="Digital Library Logo" class="logo">
+        <h1>Digital Library</h1>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="prof.webp" alt="User Profile Picture">
+            <div>
+                <h2>Spurthi Sri</h2>
+                <p>Active Member since 2023</p>
+            </div>
+        </div>
+        <div class="profile-details">
+            <div>
+                <h3>Personal Information</h3>
+                <p><strong>Email:</strong> Spurthirupa@example.com</p>
+                <p><strong>Phone:</strong> +91 456 7890</p>
+                <p><strong>Location:</strong> warangal, India</p>
+            </div>
+            <div>
+                <h3>Library Usage</h3>
+                <p><strong>Books Borrowed:</strong> 15</p>
+                <p><strong>Favorite Genre:</strong> Fiction</p>
+                <p><strong>Recently Borrowed:</strong> "The Great Gatsby"</p>
+            </div>
+        </div>
+        <a href="edit-profile.html" class="btn">Edit Profile</a>
+    </div>
+
+    <footer>© 2024 Digital Library | All rights reserved.</footer>
+</body>
+</html>
